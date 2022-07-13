@@ -11,8 +11,10 @@ test.csv: 4521 baris dan 18 kolom dengan 10% contoh (4521), dipilih secara acak 
 
 ## Halaman 
  - [Setup](#Setup)
+ - [Functions](#Functions)
+   - [Split Data](#Split-data)
  
-##Setup
+## Setup
   ```python
   import pathlib
   import tensorflow as tf
@@ -26,4 +28,18 @@ test.csv: 4521 baris dan 18 kolom dengan 10% contoh (4521), dipilih secara acak 
   from google.colab import data_table
   import tensorflow as tf
   from sklearn.metrics import confusion_matrix
+  ```
+ ## Functions
+ 
+ ### Split data
+ ```python
+ def dataframe_split(data, ratio= 0.2, shuffle= 0):
+  len_ = int(len(data) - (ratio*len(data)))
+  if shuffle == 0 :
+    part_  = data.iloc[:int(1 + len_)]
+    rest_part_ = data.drop(part_.index)
+  elif shuffle == 1:
+    part_ = data.sample(frac = 1.0 - ratio)
+    rest_part_ = data.drop(part_.index)
+  return (part_, rest_part_)
   ```
