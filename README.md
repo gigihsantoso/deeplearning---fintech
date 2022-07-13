@@ -9,10 +9,25 @@ train.csv: 45.211 baris dan 18 kolom diurutkan berdasarkan tanggal (dari Mei 200
 test.csv: 4521 baris dan 18 kolom dengan 10% contoh (4521), dipilih secara acak dari train.csv
 
 
-## Halaman 
+## Halaman
+ - [Penjelasan](#Penjelasan)
  - [Setup](#Setup)
  - [Functions](#Functions)
    - [Split Data](#Split-data)
+   
+##Penjelasan
+
+###Accuracy
+Merupakan rasio prediksi Benar (positif dan negatif) dengan keseluruhan data.
+
+##Precission
+Merupakan rasio prediksi benar positif dibandingkan dengan keseluruhan hasil yang diprediksi positf
+
+###Recall (Sensitifitas)
+Merupakan rasio prediksi benar positif dibandingkan dengan keseluruhan data yang benar positif.
+
+###F1 Score
+F1 Score merupakan perbandingan rata-rata presisi dan recall yang dibobotkan
  
 ## Setup
   ```python
