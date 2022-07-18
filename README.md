@@ -58,3 +58,6 @@ F1 Score merupakan perbandingan rata-rata presisi dan recall yang dibobotkan
     rest_part_ = data.drop(part_.index)
   return (part_, rest_part_)
   ```
+  
+  ![image]
+(https://idschool.net/wp-content/uploads/2022/06/Cara-Membaca-Boxplot.jpg)
