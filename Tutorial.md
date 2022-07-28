@@ -2,9 +2,9 @@
 
 ## Halaman
  - [Boxplot](#Boxplot)
-<!--  - [Setup](#Setup)
- - [Functions](#Functions)
-   - [Split Data](#Split-data) -->
+ - [Precission](#Precission)
+ - [Recall](#Recall)
+ - [Specificity](#Specificity)
 
 ## Boxplot
 Nilai-nilai yang termuat pada boxplot antara lain meliputi nilai minimum, kuartil bawah (Q1), kuartil tengah (Q2) atau median (Me), kuartil atas (Q3), dan nilai maksimum. Cara membaca boxplot secara umum mengikuti keterangan nilai-nilai pada boxplot berikut.
@@ -18,3 +18,22 @@ Nilai-nilai yang termuat pada boxplot antara lain meliputi nilai minimum, kuarti
 **Data miring (tidak simetris)** ditunjukkan oleh boxplot dengan letak garis median tidak berada di tengah kotak. Data miring juga ditandai dari panjang whisker tidak sama antara atas-bawah atau kanan-kiri. Whisker atas lebih panjang dan terdapat outlier di bagian atas menandakan data cenderung miring ke kanan ***(positive skewness)***. Whisker bawah lebih panjang dan terdapat outlier di bagian bawah menandakan data cenderung miring ke kiri ***(negative skewness)***.
 
 ![Boxplot-dengan-Data-Tidak-Simetrik-atau-Miring](https://user-images.githubusercontent.com/109187938/179443968-3dd471a0-1915-4b58-a6b1-7c64a2f215ea.jpg)
+
+## Precission
+
+Merupakan rasio prediksi benar positif dibandingkan dengan keseluruhan hasil yang diprediksi positf. Precission menjawab pertanyaan “Berapa persen konsumen yang benar berlangganan dari keseluruhan mahasiswa yang diprediksi berlangganan?”
+
+Precission = **(TP) / (TP+FP)**
+
+## Recall (Sensitifitas)
+
+Merupakan rasio prediksi benar positif dibandingkan dengan keseluruhan data yang benar positif. Recall menjawab pertanyaan “Berapa persen konsumen yang diprediksi berlangganan dibandingkan keseluruhan mahasiswa yang sebenarnya berlangganan”.
+
+Recall = **(TP) / (TP + FN)**
+
+
+## Specificity
+
+Merupakan kebenaran memprediksi negatif dibandingkan dengan keseluruhan data negatif. Specificity menjawab pertanyaan “Berapa persen konsumen yang benar diprediksi tidak berlangganan dibandingkan dengan keseluruhan konsumen yang sebenarnya tidak berlangganan”.
+
+Specificity = **(TN)/ (TN + FP)**
