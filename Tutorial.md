@@ -5,6 +5,7 @@
  - [Precission](#Precission)
  - [Recall](#Recall)
  - [Specificity](#Specificity)
+ - [Deployment Tensorflow Serving](#Deployment)
 
 ## Boxplot
 Nilai-nilai yang termuat pada boxplot antara lain meliputi nilai minimum, kuartil bawah (Q1), kuartil tengah (Q2) atau median (Me), kuartil atas (Q3), dan nilai maksimum. Cara membaca boxplot secara umum mengikuti keterangan nilai-nilai pada boxplot berikut.
@@ -37,3 +38,12 @@ Recall = **(TP) / (TP + FN)**
 Merupakan kebenaran memprediksi negatif dibandingkan dengan keseluruhan data negatif. Specificity menjawab pertanyaan “Berapa persen konsumen yang benar diprediksi tidak berlangganan dibandingkan dengan keseluruhan konsumen yang sebenarnya tidak berlangganan”.
 
 Specificity = **(TN)/ (TN + FP)**
+
+## Deployment
+```bash
+docker run --name fintech_portugies -it -v /home/keluarga-gigih/model_fintech_portugies:/model_fintech_portugies -e MODEL_NAME=fintech_portugies -p 8601:8601 --entrypoint /bin/bash tensorflow/serving
+```
+
+```bash
+docker run -it -v /home/keluarga-gigih/model_fintech_portugies:/model_fintech_portugies -e MODEL_NAME=fintech_portugies -p 8601:8601 --entrypoint /bin/bash tensorflow/serving
+```
