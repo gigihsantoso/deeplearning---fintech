@@ -41,9 +41,30 @@ Specificity = **(TN)/ (TN + FP)**
 
 ## Deployment
 ```bash
-docker run --name fintech_portugies -it -v /home/keluarga-gigih/model_fintech_portugies:/model_fintech_portugies -e MODEL_NAME=fintech_portugies -p 8601:8601 --entrypoint /bin/bash tensorflow/serving
+docker build -t app_name .
 ```
 
 ```bash
-docker run -it -v /home/keluarga-gigih/model_fintech_portugies:/model_fintech_portugies -e MODEL_NAME=fintech_portugies -p 8601:8601 --entrypoint /bin/bash tensorflow/serving
+docker run -p 8501:8501 -e PORT=8501 -t app_name
 ```
+
+```bash
+heroku login
+```
+
+```bash
+heroku container:login
+```
+
+```bash
+heroku create app_name
+```
+
+```bash
+heroku container:push web -a app_name
+```
+
+```bash
+heroku container:release web -a app_name
+```
+
