@@ -1,7 +1,7 @@
 # Tutorial
 
 ## Halaman
- - [Boxplot](#Boxplot)
+ - [Boxplotss](#Boxplot)
  - [Precission](#Precission)
  - [Recall](#Recall)
  - [Specificity](#Specificity)
